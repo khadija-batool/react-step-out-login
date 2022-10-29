@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Input = () => {
+const Input = ({placeholder, type, name}) => {
   return (
     <div>
-            <label for="fname">First Name</label>
-    <input type="text" id="fname" placeholder="John.doe34@gmail.com"></input>
+            <label for="fname">{placeholder}</label>
+    <input type={type} id="fname" placeholder={placeholder} name={name}></input>
     </div>
   )
 }

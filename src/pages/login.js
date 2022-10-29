@@ -14,8 +14,8 @@ const login = () => {
      <form>
       <h3 className='title'>Log In your account</h3>
       <p className='sub-title'>Please enter your login details.</p>
-      <Input />
-      <Input />
+      <Input name="email" type="email" placeholder="Email" />
+      <Input name="password" type="password" placeholder="Password"/>
       <div className='remember-me'>
         <div>
           <input type="checkbox" className='checkbox'/>
