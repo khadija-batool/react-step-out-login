@@ -2,27 +2,28 @@ import React from 'react'
 import Input from '../components/Input'
 import ContainedBtn from "../components/ContainedBtn"
 import OutlinedBtn from "../components/OutlinedBtn"
-import Logo from "../assets/logo/Logo.png"
+import { images } from '../config'
 
-const login = () => {
+export const Login = () => {
   return (
     <div className='login wrapper'>
-    <div className='warp'>
+    <div className='auth-wrapper '>
      <div className='logo'>
-      <img src={Logo} />
+      <img src={images.logo} />
      </div>
-     <form>
-      <h3 className='title'>Log In your account</h3>
-      <p className='sub-title'>Please enter your login details.</p>
+     <form className='auth-form spaces'>
+      <h3 className='h3'>Log In your account</h3>
+      <p className='p'>Please enter your login details.</p>
       <Input name="email" type="email" placeholder="Email" />
       <Input name="password" type="password" placeholder="Password"/>
       <div className='remember-me'>
-        <div>
+        <div className='terms'>
           <input type="checkbox" className='checkbox'/>
         <p className='inline'>Remember Me</p></div>
         <div><p>Forgot Password?</p></div>
       </div>
-      <div className='space'> <ContainedBtn />
+      <div className='space'> 
+      <ContainedBtn />
        </div>
        <hr />
        <div>
@@ -34,5 +35,3 @@ const login = () => {
     </div>
   )
 }
-
-export default login

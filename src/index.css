@@ -3,28 +3,49 @@
   margin: 0;
   font-family: 'Lato', sans-serif;
 }
+
+/* all applications colors and font size */
+:root {
+  --color_blue : #0AC2CC;
+  --color_black:black;
+  --color_white:white;
+}
+
+
+
+
+
+
+
 .logo {
-  padding: 3.5rem 10rem;
+  width: 85px;
+  height: 85px;
+  margin: 0 auto;
+  padding:4rem 0;
+}
+.img-fluid {
+  max-width: 100%;
+  height: auto;
 }
 .btn-contained {
-  background-color: #0AC2CC;
-  color: white;
+  background-color: var(--color_blue);
+  color: var(--color_white);
   display: block;
   padding: 8px;
-  width: 260px;
+  width: 100%;
   border-radius: 50px;
   margin: 2px;
   border: none;
 }
 .btn-outlined {
-  background-color: white;
-  color: #0AC2CC;
+  background-color: var(--color_white);
+  color: var(--color_blue);
   display: block;
   padding: 8px;
-  width: 260px;
+  width: 100%;
   border-radius: 50px;
   margin: 5px 0;
-  border: 1px solid #0AC2CC;
+  border: 1px solid var(--color_blue);
 }
 
 label {
@@ -32,34 +53,63 @@ label {
   margin: 20px;
 }
 #fname {
-  padding: 8px 60px;
+  padding: 8px 20px;
+  width: 100%;  
   margin: 8px 0;
   display: block;
-  border: 1px solid black;
+  border: 1px solid var(--color_black);
   border-radius: 30px;
   box-sizing: border-box;
 } 
-.warpper {
-  background-color: white;
+.wrapper {
+  background-color: var(--color_white);
   width: 100%;
 }
-.warp {
-  background-color: #0AC2CC;
+.auth-wrapper {
+  background-color: var(--color_blue);
   width: 30%;
   margin:  auto;
   height: 95vh;
 }
-form {
-  background-color: white;
+.auth-form {
+  background-color: var(--color_white);
   border: .1px solid grey;
-  padding: 20px 4rem ;
   border-radius: 22px 22px 0 0;
+  padding: 30px 30px 30px 30px;
 }
-.title {
-  font-weight: 500;
+.split-inputs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.split-inputs input {
+  padding: .3rem ;
+  margin: 5px;
+  border-radius: 20px;
+  border: 1px solid var(--color_blue);
+}
+input {
+  width: 100%;
+}
+
+.terms input{
+width: auto;
+}
+.terms {
+  display: flex;
+  padding: 10px;
+}
+.terms p {
+  margin: 0 10px;
+}
+.auth-form input:not([type="checkbox"]){
+  margin-top:20px;
+}
+.h3 {
+  font-weight: 600;
   text-align: center;
 }
-.sub-title {
+.p{
   font-size: 11px;
   text-align: center;
   margin-bottom: 20px;
@@ -81,18 +131,18 @@ hr {
 }
 
 @media only screen and (max-width: 600px){
-	.warp {
+	.auth-wrapper {
     width: 100% !important;
     margin:  0 !important;
     height: 95vh;
 	}
   #fname[type=text] { 
-    padding: 10px 85px;
+    padding: 10px 20px;
   }
   .btn-contained {
-    width: 310px;
+    width: 100%;
   }
   .btn-outlined {
-    width: 310px ;
+    width: 100% ;
   }
 }
