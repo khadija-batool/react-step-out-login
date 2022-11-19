@@ -1,37 +1,34 @@
-import React from 'react'
-import { images } from '../config'
-import Input from '../components/Input'
-import ContainedBtn from '../components/ContainedBtn'
-import OutlinedBtn from '../components/OutlinedBtn'
+import React from "react";
+import { Input, Button } from "../components";
+import { images } from "../config";
 
 export const Register = () => {
   return (
-    <div className='auth-wrapper'>
+    <div className="auth-wrapper">
       <div className="auth-container">
-        <div className="logo">
-          <img src={images.logo} alt="" className='img-fluid'/>
+        <div className="logo-holder">
+          <img src={images.logo} alt="logo" className="img-fluid" />
         </div>
-        <form action="" className="auth-form">
-          <h3 className='h3'>Create An Account.</h3>
-          <p className='p '>Please enter below details to get registered!</p>
+        <form className="auth-form">
+          <h1>Create An Account.</h1>
+          <p>Please enter below details to get registered.</p>
           <div className="split-inputs">
-            <Input type='text' placeholder='First Name' name='firstName'/>
-            <Input type='text' placeholder='Last Name' name='lastName' />
+            <Input type="text" placeholder="First Name" name="firstName" />
+            <Input type="text" placeholder="Last Name" name="lastName" />
           </div>
-      <Input name="Date of birth" type="date" placeholder="Date of birth" />
-      <Input name="Email" type="email" placeholder="Email" />
-      <Input name="Username" type="text" placeholder="Username" />
-
-          <div className=' terms'>
-            <input type="checkbox" className='checkbox'/>
-            <p className='p inline'>Accept terms and Conditions</p>
+          <Input placeholder="Date of Birth" name="dob" type="date" />
+          <Input placeholder="Email" name="email" type="email" />
+          <Input placeholder="User Name" name="userName" type="text" />
+          <div className="terms-conditions">
+            <Input type="checkbox" />
+            <p>Accept Terms & Conditions</p>
           </div>
-          <OutlinedBtn />
+          <Button>Register</Button>
           <hr />
-          <p className='p'>Already have an account</p>
-          <ContainedBtn/>
+          <p>Already have an account</p>
+          <Button variant="outlined">Login</Button>
         </form>
       </div>
     </div>
-  )
-}
+  );
+};

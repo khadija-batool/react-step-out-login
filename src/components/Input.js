@@ -1,18 +1,12 @@
 import React from "react";
 
-const Input = ({ placeholder, type, name, className }) => {
+export function Input({ placeholder, type, name, className }) {
   return (
-    <div>
-      <label for="fname">{placeholder}</label>
-      <input
-        className={className}
-        type={type}
-        id="fname"
-        placeholder={placeholder}
-        name={name}
-      ></input>
-    </div>
+    <input
+      className={className}
+      type={type}
+      name={name}
+      placeholder={placeholder}
+    />
   );
-};
-
-export default Input;
+}
